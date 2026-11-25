@@ -1,0 +1,267 @@
+/* ========== RESET & BASE ========== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --blue: #2b95d6;
+  --blue-line: #1f7fc0;
+  --black: #000;
+  --dark: #071820;
+  --pill-bg: #1c1d20;
+  --white: #fff;
+  --font: "Raleway", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--black);
+  color: var(--white);
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ========== TÍTULO DE SEÇÃO (reutilizado) ========== */
+.section-title {
+  color: var(--blue);
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* ========== HERO ========== */
+.hero {
+  position: relative;
+  z-index: 1;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 20px 60px;
+  background:
+    linear-gradient(to bottom, rgba(4, 20, 28, 0.55), rgba(0, 0, 0, 0.95)),
+    url("img/banner.png") center / cover no-repeat,
+    #04141c;
+  border-bottom: 1px solid var(--blue-line);
+}
+
+.hero__content {
+  max-width: 560px;
+}
+
+.hero__logo {
+  width: 270px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(8, 28, 38, 0.9) 55%, transparent 70%);
+}
+
+.hero__title {
+  color: var(--blue);
+  font-size: 2.4rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin-bottom: 14px;
+}
+
+.hero__text {
+  font-size: 1.1rem;
+  margin-bottom: 26px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 18px 48px;
+  border: 2px solid var(--blue);
+  color: var(--blue);
+  font-weight: 800;
+  font-size: 0.9rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: transparent;
+  transition: background 0.25s, color 0.25s;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  background: var(--blue);
+  color: var(--black);
+  outline: none;
+}
+
+/* ========== O QUE VOU APRENDER ========== */
+.learn {
+  position: relative;
+  z-index: 1;
+  background: var(--black);
+  padding: 90px 20px 90px;
+  text-align: center;
+}
+
+.learn__text {
+  max-width: 780px;
+  margin: 30px auto 36px;
+  font-size: 0.95rem;
+}
+
+.modules {
+  list-style: none;
+  max-width: 535px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.modules__item {
+  padding: 14px 20px;
+  background: var(--pill-bg);
+  border: 1px solid var(--blue-line);
+  border-radius: 999px;
+  font-size: 0.95rem;
+  box-shadow: inset 0 0 12px rgba(43, 149, 214, 0.12);
+}
+
+.modules__item span {
+  color: var(--blue);
+}
+
+/* ========== IMAGEM + TEXTO TOTALMENTE FIXOS ========== */
+/* A camada fica presa à janela do navegador (position: fixed): nunca rola.
+   Todas as seções têm fundo sólido e ficam por cima dela (z-index: 1),
+   exceto .window, que é transparente e funciona como "janela" por onde
+   a camada fixa aparece. Ao rolar, o conteúdo sobe e cobre imagem e texto. */
+.fixed-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+  background: url("img/woman-code.png") center / cover no-repeat;
+}
+
+.fixed-layer__title {
+  font-family: "Poppins", var(--font);
+  font-weight: 800;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.05;
+  color: var(--white);
+  /* contorno azul/rosa atrás do texto */
+  text-shadow: 3px 3px 0 #3d6bff, 5px 5px 0 rgba(255, 255, 255, 0.35);
+}
+
+.window {
+  position: relative;
+  height: 100vh;          /* quanto tempo a imagem fica visível durante a rolagem */
+  background: transparent;
+  border-top: 1px solid var(--blue-line);
+}
+
+/* ========== EVOLUA ========== */
+.evolve {
+  position: relative; /* garante que fique por cima da imagem fixa */
+  z-index: 1;
+  background: var(--black);
+  padding: 80px 20px 90px;
+  text-align: center;
+}
+
+.evolve .section-title {
+  max-width: 780px;
+  margin: 0 auto 40px;
+}
+
+.evolve__image {
+  width: 100%;
+  max-width: 660px;
+  margin: 0 auto 50px;
+}
+
+.evolve__text {
+  max-width: 780px;
+  margin: 0 auto;
+  font-size: 0.95rem;
+}
+
+/* ========== FOOTER ========== */
+.footer {
+  position: relative;
+  z-index: 1;
+  background: var(--dark);
+  border-top: 1px solid var(--blue-line);
+  padding: 60px 20px 50px;
+  text-align: center;
+}
+
+.footer__logo {
+  width: 320px;
+  margin: 0 auto 14px;
+}
+
+.footer__text {
+  font-size: 0.95rem;
+}
+
+.footer__text a {
+  color: var(--blue);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.footer__text a:hover {
+  text-decoration: underline;
+}
+
+/* ========== RESPONSIVO ========== */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.4rem;
+    letter-spacing: 0.18em;
+  }
+
+  .hero__logo {
+    width: 200px;
+  }
+
+  .hero__title {
+    font-size: 1.8rem;
+  }
+
+  .hero__text br {
+    display: none;
+  }
+
+  .btn {
+    padding: 16px 32px;
+  }
+
+  .fixed-layer {
+    padding: 0 8%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

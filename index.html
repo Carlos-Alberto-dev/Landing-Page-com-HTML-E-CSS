@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trilha de CSS da DIO</title>
+  <meta name="description" content="A nova Trilha de CSS da DIO está disponível. Aprenda do zero como desenvolver sites profissionais.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- CAMADA FIXA: imagem da mulher + texto. Nunca rola. -->
+  <div class="fixed-layer">
+    <h2 class="fixed-layer__title">transforme<br>o mundo<br>com a gente</h2>
+  </div>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero__content">
+      <img class="hero__logo" src="img/logo.png" alt="Selo CSS Developer">
+      <h1 class="hero__title">Trilha de CSS da DIO</h1>
+      <p class="hero__text">
+        A nova Trilha de CSS da DIO está disponível. Acesse já<br>
+        e aprenda do zero como desenvolver sites profissionais
+      </p>
+      <a class="btn" href="https://dio.me" target="_blank" rel="noopener">Quero me inscrever</a>
+    </div>
+  </header>
+
+  <!-- O QUE VOU APRENDER -->
+  <section class="learn">
+    <h2 class="section-title">O que vou aprender?</h2>
+    <p class="learn__text">
+      Temos 3 módulos recheados de conteúdos do básico ao avançado para que você aprenda a desenvolver
+      sites profissionais utilizando somente HTML e CSS: sem nenhuma biblioteca ou framework a mais.
+    </p>
+
+    <ul class="modules">
+      <li class="modules__item"><span>Módulo 01:</span> primeiros passos com CSS</li>
+      <li class="modules__item"><span>Módulo 02:</span> trabalhando com layouts no CSS</li>
+      <li class="modules__item"><span>Módulo 03:</span> refinando os estilos CSS das nossas páginas</li>
+    </ul>
+  </section>
+
+  <!-- JANELA: espaço transparente por onde se enxerga a camada fixa -->
+  <section class="window" aria-hidden="true"></section>
+
+  <!-- EVOLUA -->
+  <section class="evolve">
+    <h2 class="section-title">Evolua e encare novos desafios profissionais</h2>
+
+    <img class="evolve__image" src="img/professional-challenges.png"
+         alt="Profissionais contratados após estudarem na DIO">
+
+    <p class="evolve__text">
+      Junte-se ao nosso ecossistema e transforme o mundo com a gente! Todos os dias dezenas de empresas
+      acessam a nossa plataforma em busca dos talentos mais criativos, dinâmicos e colaborativos, além do
+      conhecimento técnico. A nossa missão é te preparar para que você conecte-se com as melhores
+      oportunidades.
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <img class="footer__logo" src="img/dio-logo.png" alt="DIO - make the change">
+    <p class="footer__text">Acesse <a href="https://dio.me" target="_blank" rel="noopener">dio.me</a> e se cadastre agora</p>
+  </footer>
+
+</body>
+</html>
